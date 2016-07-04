@@ -14,8 +14,13 @@
  - 
    
 ## CONTACT 
- - [lib-x.com](http://lib-x.com)
+ - [lib-x.com](http://lib-x.com)  
+ 
  - [github](https://github.com/wangzhibinjunhua) 
+ 
  - lib-x@lib-x.com
+ 
  - wangzhibin_x@foxmail.com
+ 
+ - Powered by wzb\<wzb@lib-x.com> [粤ICP备16008050号](http://www.miitbeian.gov.cn/)
  
