@@ -1,6 +1,6 @@
-
 1.[手表通信协议](http://api.huayinghealth.com/doc/watchserver.html)
 ==================================================================
+ - [家加乐儿童手表通信协议](http://api.huayinghealth.com/doc/watchserver_jjl.html)
   
   
 2.GSM版智能设备
