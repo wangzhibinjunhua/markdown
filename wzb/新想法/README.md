@@ -1,2 +1,1 @@
-# markdown
-## markdown
+## 一些新的想法
