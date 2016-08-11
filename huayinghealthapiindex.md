@@ -1,3 +1,4 @@
+# Huayinghealth API
 # 1.[手表通信协议](http://api.huayinghealth.com/doc/watchserver.html)
 
  - [加家乐儿童手表通信协议](http://api.huayinghealth.com/doc/watchserver_jjl.html)
@@ -8,4 +9,8 @@
 - [novatech 推送服务](http://api.huayinghealth.com/push/publish.php)
 
 # 3.GSM版智能设备
- - [GSM血压计&血糖仪](http://api.huayinghealth.com/doc/gsm/gsm_bpbg.html)
+ - [GSM血压计&血糖仪](http://api.huayinghealth.com/doc/gsm/gsm_bpbg.html)     
+
+
+# 4.地图定位服务
+- [基站wifi定位](http://api.huayinghealth.com/doc/map/lbs.html)
