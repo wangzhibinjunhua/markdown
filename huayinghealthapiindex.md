@@ -14,3 +14,7 @@
 
 # 4.地图定位服务
 - [基站wifi定位](http://api.huayinghealth.com/doc/map/lbs.html)
+- [逆地理编码](http://api.huayinghealth.com/doc/map/geocode.html)
+        
+# 5.天气服务
+- [获取全国天气](http://api.huayinghealth.com/doc/weather/weather.html)
