@@ -7,7 +7,7 @@
     
 # 2.儿童手表app接口服务
 - [REST API](http://api.huayinghealth.com/doc/watch/watchapi.html)
-- [tcp长连接服务]()  
+- [tcp长连接服务](http://api.huayinghealth.com/doc/watch/tcp.html)  
 
 # 3.android 推送服务
 - [novatech 推送服务](http://api.huayinghealth.com/push/publish.php)

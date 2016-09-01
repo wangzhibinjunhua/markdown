@@ -92,3 +92,247 @@ sign|接口签名|是
 - ret  200:解析正常;其他:异常或错误
 - data 解析结果
 - code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 5.监听
+## `?service=watch.monitor`
+### 5.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei,为15位数字|是
+phonenumber|手表回拨的电话号码|是
+sign|接口签名|是
+    
+### 5.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.monitor&imei=358688000000159&phonenumber=13800001234](http://lib.huayinghealth.com/lib-x/?service=watch.monitor&imei=358688000000159&phonenumber=13800001234)
+### 5.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+        
+## 6.设置sos号码
+## `?service=watch.set_sos_number`
+### 6.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表Imei|是
+sos|sos号码,最多三个,以,隔开.例子:123456,123456,123456|是
+sign|接口签名|是
+### 6.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.set_sos_number&imei=358688000000159&sos=13800001234,123456,222365](http://lib.huayinghealth.com/lib-x/?service=watch.set_sos_number&imei=358688000000159&sos=13800001234,123456,222365)
+### 6.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 7.恢复出厂设置
+## `?service=watch.reset`
+### 7.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 7.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.reset&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.reset&imei=358688000000159)
+### 7.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 8.重启手表
+## `?service=watch.reboot`
+### 8.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 8.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.reboot&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.reboot&imei=358688000000159)
+### 8.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+
+## 9.请求定位
+## `?service=watch.req_location`
+### 9.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 9.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.req_location&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.req_location&imei=358688000000159)
+### 9.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+
+## 10.关机
+## `?service=watch.shutdown`
+### 10.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 10.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.shutdown&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.shutdown&imei=358688000000159)
+### 10.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 11.找手表
+## `?service=watch.find_dev`
+### 11.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 11.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.find_dev&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.find_dev&imei=358688000000159)
+### 11.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 12.设置闹钟
+## `?service=watch.set_alarm`
+### 12.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+alarm|设置的闹钟,格式为08:10-1-1,08:10-1-2,08:10-1-3-0111110 多组闹钟之间用逗号隔开.`解释:08:10:闹钟时间为8点10分`;第二个1代表开启,0代表关闭.第三个数字1,2,3 代表三种类型,1:只闹一次;2:每天闹;3:自定义时间,后面0111110代表周一-周五闹,周日和周六不闹|是
+sign|接口签名|是
+    
+### 12.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.set_alarm&imei=358688000000159&alarm=08:00-1-1](http://lib.huayinghealth.com/lib-x/?service=watch.set_alarm&imei=358688000000159&alarm=08:00-1-1)
+### 12.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 13.设置电话本(前五个)
+## `?service=watch.set_contact_a`
+### 13.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+contacta|联系人,格式为 姓名1,电话1,姓名2,电话2,姓名3,电话3,姓名4,电话4,姓名5,电话5.姓名为fffe格式的unicode码,电话为数字|是
+sign|接口签名|是
+    
+### 13.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.set_contact_a&imei=358688000000159&contacta=8b730f5c,123,8b730f5c,125](http://lib.huayinghealth.com/lib-x/?service=watch.set_contact_a&imei=358688000000159&contacta=8b730f5c,123,8b730f5c,125)
+- 8b730f5c 为中文 王小 unicode码 fffe格式的 每个字符占四位unicode
+
+### 13.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 14.设置电话本(后五个)
+## `?service=watch.set_contact_b`
+### 14.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+contactb|联系人,格式为 姓名1,电话1,姓名2,电话2,姓名3,电话3,姓名4,电话4,姓名5,电话5.姓名为fffe格式的unicode码,电话为数字|是
+sign|接口签名|是
+    
+### 14.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.set_contact_b&imei=358688000000159&contactb=8b730f5c,123,8b730f5c,125](http://lib.huayinghealth.com/lib-x/?service=watch.set_contact_b&imei=358688000000159&contactb=8b730f5c,123,8b730f5c,125)
+- 8b730f5c 为中文 王小 unicode码 fffe格式的 每个字符占四位unicode
+
+### 14.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 15.发送文本消息
+## `?service=watch.send_msg`
+### 15.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+message|发送的消息,unicode码,每个字符占4位,例如:你好(604f7d59)|是
+sign|接口签名|是
+    
+### 15.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.send_msg&imei=358688000000159&message=604f7d59](http://lib.huayinghealth.com/lib-x/?service=watch.send_msg&imei=358688000000159&message=604f7d59)
+### 15.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 16.增加小红花
+## `?service=watch.add_honor`
+### 16.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 16.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.add_honor&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.add_honor&imei=358688000000159)
+- 增加一朵小红花
+    
+### 16.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 17.清零小红花
+## `?service=watch.clear_honor`
+### 17.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+sign|接口签名|是
+    
+### 17.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=watch.clear_honor&imei=358688000000159](http://lib.huayinghealth.com/lib-x/?service=watch.clear_honor&imei=358688000000159)
+- 清零小红花
+    
+### 17.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+## 18.设置免打扰时间
+## `?service=watch.set_silence`
+### 18.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+silence|设置的免打扰时间段,多组之间用逗号隔开.例如:`21:10-07:30,09:00-12:00,14:00-16:00`|是
+sign|接口签名|是
+    
+### 18.2 实例说明
+    http://lib.huayinghealth.com/lib-x/?service=watch.set_silence&imei=358688000000159&silence=21:10-07:30,09:00-12:00,14:00-16:00
+
+    
+### 18.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:设置成功;1:设备离线状态;2:参数错误
+    
+
+    
+    
