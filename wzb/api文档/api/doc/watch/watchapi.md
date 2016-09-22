@@ -333,6 +333,38 @@ sign|接口签名|是
 - data 解析结果
 - code 0:设置成功;1:设备离线状态;2:参数错误
     
+## 19.获取新微聊信息列表
+## `?service=watch.get_new_message_list`
+### 19.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+user_id|app帐号(注册的手机号)|是
+sign|接口签名|是
+    
+### 19.2 实例说明
+   `http://lib.huayinghealth.com/lib-x/?service=watch.get_new_message_list&imei=123456789012345&user_id=13112345678`
+
+    
+### 19.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":[{"file":"123456789012345_1474532952.amr"},{"file":"123456789012345_1474532953.amr"},{"file":"123456789012345_1474532954.amr"}],"info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:有新消息;1:无新消息;2:参数错误
+- message:新消息文件名称filename
+    
+###特别说明
+- 语音文件位置:`http://core.huayinghealth.com/media/childwatch/filename`
+- 可直接下载,amr格式音频文件
+- 关于离线消息,手表可发离线消息保存在服务器,app在连上网络时自行调用这个接口查询是否有新消息,有新消息就down下来
+- down一个文件filename后,需要调用接口
+- `http://lib.huayinghealth.com/lib-x/?service=watch.ignore_message&imei=123456789012345&user_id=13112345678&filename=123456789012345_1474527618.amr`
+- 参数同上,多一个filename参数即为down下来的音频文件名称.
+- 返回值{"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret 200:解析正常
+- code 0:处理正常
+
+    
 
     
     
