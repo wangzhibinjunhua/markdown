@@ -363,6 +363,45 @@ sign|接口签名|是
 - 返回值{"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
 - ret 200:解析正常
 - code 0:处理正常
+    
+
+## 20.绑定手表
+## `?service=watch.bind_watch`
+### 20.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+user_id|app帐号(注册的手机号)|是
+sign|接口签名|是
+    
+### 20.2 实例说明
+    http://lib.huayinghealth.com/lib-x/?service=watch.bind_watch&imei=987654321012345&user_id=121212121
+
+    
+### 20.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:绑定成功;1:绑定错误或者已绑定;2:参数错误
+
+## 21.解绑手表
+## `?service=watch.unbind_watch`
+### 21.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+imei|手表imei|是
+user_id|app帐号(注册的手机号)|是
+sign|接口签名|是
+    
+### 21.2 实例说明
+    http://lib.huayinghealth.com/lib-x/?service=watch.unbind_watch&imei=987654321012345&user_id=121212121
+
+    
+### 21.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:解绑成功;1:错误或者本身没有绑定;2:参数错误
 
     
 
