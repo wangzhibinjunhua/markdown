@@ -9,8 +9,9 @@ HTTP/GET
 - 编码格式
 如无特殊声明,所有接口的输入参数和输出数据编码全部统一为utf-8
 
-- 所有接口都带有sign参数,生成规则是所有参数按字典排序md5加密,32位小写字符串.
+- 所有接口都带有sign参数,生成规则是所有参数名称按字典排序md5加密,32位小写字符串.
 - service=xx.oo参数包含在内,sign参数不包含
+- 举例: 参数service=xxx&upmode=10&imei=13123123 参数名称升序排序 imei <service< upmode.   拼接内容为字符串str=13123123xxx10. 然后计算str的md5,32位小写  
 
 ## 1.获取最新的一次定位信息
 ## `?service=watch.get_lastest_location`
