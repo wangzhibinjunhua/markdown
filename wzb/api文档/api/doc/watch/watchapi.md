@@ -59,6 +59,8 @@ sign|接口签名|是
 - message 坐标数组
 - location_lon 经度
 - location_lat 纬度
+- 2016-10-24 update 增加了返回定位类型参数 location_type
+- 定位类型: 0:gps定位;1:wifi定位;2:基站定位
         
 ## 3.获取手表在线状态
 ## `?service=watch.is_online`
