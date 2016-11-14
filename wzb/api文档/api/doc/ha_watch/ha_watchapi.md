@@ -422,7 +422,84 @@ sign|接口签名|是
     {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
 - ret  200:解析正常;其他:异常或错误
 - data 解析结果
-- code 0:设置成功;1:设备离线状态;2:参数错误
+- code 0:设置成功;1:设备离线状态;2:参数错误   
+
+## 23.获取短信验证码
+## `?service=HaWatchAccount.get_vcode`
+### 23.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+sign|接口签名|是
+    
+### 23.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_vcode&mobile=13012345678](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_vcode&mobile=13012345678)
+- 提交手机号,服务端生成验证码,发送到手机,等待验证
+    
+### 23.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功;1:手机号已被注册过;2:当日短信发送数量已达上限;3:注册太频繁,一分钟后再试
+    
+## 24.提交手机号和短信验证码验证
+## `?service=HaWatchAccount.verify_mobile`
+### 24.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+vcode|短信验证码|是
+sign|接口签名|是
+    
+### 24.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_mobile&mobile=13012345678&vcode=899967](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_mobile&mobile=13012345678&vcode=899967)
+- 提交手机号和短信验证码验证
+    
+### 24.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功;返回手机号和注册授权码;其他:验证失败
+    
+## 25.注册帐号
+## `?service=HaWatchAccount.register`
+### 25.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+vkey|注册授权码|是
+password|密码,长度6-14位|是
+sign|接口签名|是
+    
+### 25.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.register&mobile=13012345678&vkey=966742c2161ff1632479cbcedf47f49f&password=123456](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.register&mobile=13012345678&vkey=966742c2161ff1632479cbcedf47f49f&password=123456)
+- 注册新用户
+    
+### 25.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功;其他:失败
+    
+## 26.用户登录
+## `?service=HaWatchAccount.login`
+### 26.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+password|密码,长度6-14位|是
+sign|接口签名|是
+    
+### 26.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.login&mobile=13012345678&password=123456](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.login&mobile=13012345678&password=123456)
+- 用户登录
+    
+### 26.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功,返回用户信息(昵称,用户名,性别,等等);2:登录失败;3:登录失败;9:帐号被锁定
+
 
   
 
