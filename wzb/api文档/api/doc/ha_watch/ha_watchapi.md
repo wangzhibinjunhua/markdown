@@ -500,6 +500,61 @@ sign|接口签名|是
 - data 解析结果
 - code 0:成功,返回用户信息(昵称,用户名,性别,等等);2:登录失败;3:登录失败;9:帐号被锁定
 
+## 27.找回密码,获取短信验证码
+## `?service=HaWatchAccount.get_forgetpw_code`
+### 27.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+sign|接口签名|是
+    
+### 27.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_forgetpw_code&mobile=13012345678](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.get_forgetpw_code&mobile=13012345678)
+- 用于找回密码时,获取短信验证码
+    
+### 27.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功,发送短信验证码;3:没有此用户;1:稍后再尝试
+    
+
+## 28.找回密码,验证短信验证码
+## `?service=HaWatchAccount.verify_forgetpw_code`
+### 28.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+vcode|短信验证码|是
+sign|接口签名|是
+    
+### 28.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_forgetpw_code&mobile=13012345678&vcode=839174](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.verify_forgetpw_code&mobile=13012345678&vcode=839174)
+- 用于找回密码时,验证短信验证码
+    
+### 28.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功,返回授权码vkey,mobile 手机号;其他:失败
+    
+## 29.找回密码,重置密码
+## `?service=HaWatchAccount.reset_forgetpw`
+### 29.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+sign|接口签名|是
+    
+### 29.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.reset_forgetpw&mobile=13012345678&vkey=a4d4a5d0ad4efc1a636106dddae31711&password=1234567](http://lib.huayinghealth.com/lib-x/?service=HaWatchAccount.reset_forgetpw&mobile=13012345678&vkey=a4d4a5d0ad4efc1a636106dddae31711&password=1234567)
+- 用于找回密码时,重置密码为1234567
+    
+### 29.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功;1:失败
 
   
 
