@@ -555,6 +555,26 @@ sign|接口签名|是
 - ret  200:解析正常;其他:异常或错误
 - data 解析结果
 - code 0:成功;1:失败
+    
+## 30.获取健康数据(心率,血压,心电图)
+## `?service=HaWatchAccount.get_health_data`
+### 30.1 参数说明
+参数名称|说明|是否必须
+--|--|--
+mobile|手机号|是
+type|int型,数据类型,0:心率;1:血压,2:心电|是
+list|int型,数据条数,0:最新的20条,1:前面的20条;2:依次类推.|是
+sign|接口签名|是
+    
+### 30.2 实例说明
+[http://lib.huayinghealth.com/lib-x/?service=HaWatch.get_health_data&imei=352108010002300&list=1&type=0](http://lib.huayinghealth.com/lib-x/?service=HaWatch.get_health_data&imei=352108010002300&list=1&type=0)
+- 获取需要查询的健康数据
+    
+### 30.3 返回值说明
+    {"ret":200,"data":{"code":0,"message":"","info":""},"msg":""}
+- ret  200:解析正常;其他:异常或错误
+- data 解析结果
+- code 0:成功,返回相应的数据及时间;1:无数据
 
   
 
