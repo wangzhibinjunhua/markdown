@@ -557,7 +557,7 @@ sign|接口签名|是
 - code 0:成功;1:失败
     
 ## 30.获取健康数据(心率,血压,心电图)
-## `?service=HaWatchAccount.get_health_data`
+## `?service=HaWatch.get_health_data`
 ### 30.1 参数说明
 参数名称|说明|是否必须
 --|--|--
